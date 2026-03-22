@@ -18,16 +18,20 @@
     </header>
 
     <nav>
-        <a href="#temperos">Temperos</a>
-        <a href="#snacks">Snacks</a>
-        <a href="#suplementos">Suplementos</a>
-        <a href="#chas">Chás</a>
-        <a href="#graos">Grãos</a>
-        <a href="#potes">Potes</a>
-        <a href="#paes">Pães</a>
-        <a href="#condimentos">Condimentos</a>
-        <a href="#corporal">Corporal</a>
-        <a href="#biscoitos">Biscoitos</a>
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+
+        <div class="menu-links" id="menuLinks">
+            <a href="#temperos">Temperos</a>
+            <a href="#snacks">Snacks</a>
+            <a href="#suplementos">Suplementos</a>
+            <a href="#chas">Chás</a>
+            <a href="#graos">Grãos</a>
+            <a href="#potes">Potes</a>
+            <a href="#paes">Pães</a>
+            <a href="#condimentos">Condimentos</a>
+            <a href="#corporal">Corporal</a>
+            <a href="#biscoitos">Biscoitos</a>
+        </div>
     </nav>
 
     <br>
@@ -2224,5 +2228,19 @@
 
     <a href="#topo" class="topo">↑ Topo</a>
 
+    <script>
+        function toggleMenu(){
+        document.getElementById("menuLinks").classList.toggle("active");
+        }
+    </script>
+
+    <script>
+        document.querySelectorAll('.menu-links a').forEach(link => {
+        link.addEventListener('click', () => {
+            document.getElementById('menuLinks').classList.remove('active');
+        });
+    });
+</script>
+   
 </body>
 </html>
